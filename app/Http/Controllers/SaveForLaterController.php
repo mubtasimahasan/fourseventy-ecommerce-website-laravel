@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Gloudemans\Shoppingcart\Facades\Cart;
 
@@ -41,7 +42,7 @@ class SaveForLaterController extends Controller
         }
 
         Cart::instance('default')->add($item->id, $item->name, 1, $item->price)
-            ->associate('App\Product');
+            ->associate('App\Models\Product');
 
         return redirect()->route('cart.index')->with('success_message', 'Item has been moved to Cart!');
     }
