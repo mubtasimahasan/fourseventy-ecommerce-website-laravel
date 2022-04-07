@@ -1,9 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Posts</h1>
+    <h1 class="stylish-heading">Posts</h1>
     @if(count($posts) > 0)
         @foreach($posts as $post)
+            @if(!Auth::guest())
+                <a href="/posts/create" class="btn btn-outline-primary">Create Post</a>
+                <br><br>
+            @endif
             <div class="card card-body bg-light">
                 <div class="row">
                     <div class="col-md-4 col-sm-4">

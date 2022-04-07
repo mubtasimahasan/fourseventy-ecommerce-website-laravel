@@ -85,6 +85,28 @@ hr {
   overflow: visible;
 }
 
+h1.stylish-heading {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+h1.stylish-heading:before,
+h1.stylish-heading:after {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 66px;
+  height: 1px;
+  background: #212121;
+  content: '';
+  display: block;
+}
+
+h1.stylish-heading:after {
+  bottom: -14px;
+  top: auto;
+}
+
 h1,
 h2,
 h3,
