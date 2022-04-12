@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel Ecommerce Example</title>
+        <title>{{ config('app.name', 'FourSeventy') }}</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat%7CRoboto:300,400,700" rel="stylesheet">
@@ -18,32 +18,8 @@
 
     </head>
     <body>
-        @include('inc.navbar')
+        @include('partials.navbar')
         <header class="with-background">
-            {{-- <div class="top-nav container">
-                    <div class="logo">FourSeventy</div>
-                    <ul>
-                        <li>
-                            <a href="/">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li>
-                        <a href="/about">About</a>
-                        </li>
-                        <li >
-                            <a href="/posts">Blog</a>
-                        <li>
-                            <a href="/shop">Shop</a>
-                        </li>
-                        </li>
-                        <li>
-                            <a href="{{ route('cart.index') }}">Cart <span class="cart-count">
-                                @if (Cart::instance('default')->count() > 0)
-                                <span>{{ Cart::instance('default')->count() }}</span></span>
-                                @endif
-                            </a>
-                        </li>
-                    </ul>
-            </div> <!-- end top-nav --> --}}
             <div class="hero container">
                 <div class="hero-copy">
                     <h1>Ecommerce and Blog Website</h1>

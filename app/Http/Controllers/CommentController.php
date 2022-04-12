@@ -8,10 +8,11 @@ use App\Models\Comment;
 class CommentController extends Controller
 {
     /**
-     * Write Your Code..
+     * Store a newly created comment in storage.
      *
-     * @return string
-    */
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function store(Request $request)
     {
         $input = $request->all();
@@ -23,6 +24,12 @@ class CommentController extends Controller
         return back();
     }
 
+    /**
+     * Remove the specified comment from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function destroy($id){
         $comment = Comment::find($id);
         $comment->delete();

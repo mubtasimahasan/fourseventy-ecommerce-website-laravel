@@ -2,5 +2,5 @@
 
 function presentPrice($price)
 {
-    return 'Tk '.number_format($price);
+    return '৳ '.number_format($price);
 }

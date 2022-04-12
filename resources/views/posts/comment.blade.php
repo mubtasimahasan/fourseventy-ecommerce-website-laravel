@@ -3,6 +3,13 @@
         <strong>{{ $comment->user->name }}</strong>
         <p>{{ $comment->body }}</p>
         @if(!Auth::guest())
+            @if(Auth::user()->id == $comment->user_id)
+                {!!Form::open(['action' => ['CommentController@destroy', $comment->id], 
+                            'method' => 'POST', 'class' => 'form-group'])!!}
+                                {{Form::hidden('_method', 'DELETE')}}
+                                {{Form::submit('Delete', ['class' => 'btn btn-outline-danger'])}}
+                {!!Form::close()!!}
+            @endif
             <a href="" id="reply"></a>
             <form method="post" action="{{ route('comments.store') }}">
                 @csrf
@@ -15,15 +22,8 @@
                     <input type="submit" class="btn btn-outline-success" value="Reply" />
                 </div>
             </form>
-            @if(Auth::user()->id == $comment->user_id)
-                {!!Form::open(['action' => ['CommentController@destroy', $comment->id], 
-                            'method' => 'POST', 'class' => 'form-group'])!!}
-                                {{Form::hidden('_method', 'DELETE')}}
-                                {{Form::submit('Delete', ['class' => 'btn btn-outline-danger'])}}
-                {!!Form::close()!!}
-            @endif
         @endif
 
-        @include('posts.commentsDisplay', ['comments' => $comment->replies])
+        @include('posts.comment', ['comments' => $comment->replies])
     </div>
 @endforeach

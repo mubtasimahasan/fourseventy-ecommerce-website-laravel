@@ -4,8 +4,6 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/about', 'PagesController@about');
-
 Route::resource('posts', 'PostsController');
 Route::resource('comments', 'CommentController');
 

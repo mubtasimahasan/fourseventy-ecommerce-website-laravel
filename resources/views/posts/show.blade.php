@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', $post->title)
+
 @section('content')
     <a href="/posts" class="btn btn-outline-dark">Go Back</a>
     <br><br>
@@ -26,7 +28,7 @@
 
     <h4>Comments</h4>
     <hr>
-    @include('posts.commentsDisplay', ['comments' => $post->comments, 'post_id' => $post->id])
+    @include('posts.comment', ['comments' => $post->comments, 'post_id' => $post->id])
     <hr>
 
     @if(!Auth::guest())
