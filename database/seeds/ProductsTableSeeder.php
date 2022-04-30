@@ -59,29 +59,5 @@ class ProductsTableSeeder extends Seeder
             'price' => 14000,
             'description' => 'This pre-owned or refurbished product has been professionally inspected and tested to work and look like new.',
         ]);
-
-        // Product::create([
-        //     'name' => 'Laptop 7',
-        //     'slug' => 'laptop-7',
-        //     'details' => '15 inch, 1TB SSD, 16GB RAM',
-        //     'price' => 149999,
-        //     'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
-        // ]);
-
-        // Product::create([
-        //     'name' => 'Laptop 8',
-        //     'slug' => 'laptop-8',
-        //     'details' => '15 inch, 1TB SSD, 16GB RAM',
-        //     'price' => 149999,
-        //     'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
-        // ]);
-
-        // Product::create([
-        //     'name' => 'Laptop 9',
-        //     'slug' => 'laptop-9',
-        //     'details' => '15 inch, 1TB SSD, 16GB RAM',
-        //     'price' => 149999,
-        //     'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
-        // ]);
     }
 }
